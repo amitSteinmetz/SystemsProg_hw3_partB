@@ -146,26 +146,6 @@ Fraction operator+(const Fraction& frac1, const Fraction& frac2)
 
 	return Fraction(sum, lcm);
 }
-Fraction operator+(const Fraction& frac, const float& flo)
-{
-	// Convert frac to float
-	float frac_to_float =  static_cast<float>(frac.nom) / frac.den;
-
-	// Round to 3 digits after the point
-	frac_to_float = std::round(frac_to_float * 1000) / 1000;
-
-	return std::round((frac_to_float + flo) * 1000) / 1000;
-}
-float operator+(const float& flo, const Fraction& frac)
-{
-	// Convert frac to float
-	float frac_to_float =  static_cast<float>(frac.nom) / frac.den;
-
-	// Round to 3 digits after the point
-	frac_to_float = std::round(frac_to_float * 1000) / 1000;
-
-	return flo + frac_to_float;
-}
 
 // Subtract
 Fraction operator-(const Fraction& frac1, const Fraction& frac2)
@@ -187,16 +167,6 @@ Fraction operator-(const Fraction& frac1, const Fraction& frac2)
 	reduceFraction(subtract,lcm);
 
 	return Fraction(subtract, lcm);
-}
-float operator-(const float& flo, const Fraction& frac)
-{
-	// Convert frac to float
-	float frac_to_float =  static_cast<float>(frac.nom) / frac.den;
-
-	// Round to 3 digits after the point
-	frac_to_float = std::round(frac_to_float * 1000) / 1000;
-
-	return flo - frac_to_float;
 }
 
 // Divide and multiply
