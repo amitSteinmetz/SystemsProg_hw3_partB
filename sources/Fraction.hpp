@@ -37,10 +37,6 @@ friend Fraction operator-(const Fraction& frac1, const Fraction& frac2);
 friend Fraction operator/(const Fraction& frac1, const Fraction& frac2);
 friend Fraction operator*(const Fraction& frac1, const Fraction& frac2);
 
-friend Fraction operator+(const Fraction& frac, const float& flo);
-friend float operator+(const float& flo, const Fraction& frac);
-friend float operator-(const float& flo, const Fraction& frac);
-
 friend bool operator>=(const Fraction& frac1, const Fraction& frac2); 
 friend bool operator>(const Fraction& frac1, const Fraction& frac2); 
 friend bool operator<=(const Fraction& frac1, const Fraction& frac2); 
@@ -54,6 +50,3 @@ Fraction& operator++();
 };  
 
 }
-
-
-
